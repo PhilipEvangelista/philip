@@ -1,0 +1,34 @@
+{% load static%}
+{% include 'nave_bar.html'%}
+{% block content%}
+<link rel="stylesheet" href="{%static 'base/css_files/status.css'%}" type="text/css">
+<div class="list-container">
+    <table border="1px">
+        <tr align="center" id="honey">
+            <th>Name</th>
+            <th>Date</th>
+            <th>Dept</th>
+            <th>Interest</th>
+            <th>Status</th>
+            
+        </tr>
+
+   {%for i in info%}
+        {%for v in i.information_set.all%}
+             <tr>
+                 <td>{{v.name}}</td>
+                 <td>{{v.date.date}}</td>
+                 <td>{{v.balance}}</td>
+                 <td>{{v.interest}}</td>
+                 {%if v.balance < 1%}
+                 <td>PAID</td>
+                 {%else%}
+                 <td>UNPAID</td>
+                 {%endif%}
+                 
+             </tr>
+        {%endfor%}
+   {%endfor%}
+</table>
+</div>
+{%endblock%}

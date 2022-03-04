@@ -1,0 +1,37 @@
+.edit-container{
+    border: 2px solid;
+    width: 50%;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    border-radius: 20px;
+    background: #444444;
+    box-shadow: 10px 5px 5px black;
+}
+.edit-container #form{
+    position: relative;
+    left: 12%;
+    color: yellow;
+    font-family: "Arial Narrow", serif;
+    font-size: 25px;
+}
+html{
+    background: darkcyan;
+}
+#submit{
+    position: fixed;
+    top: 55%;
+    left: 30%;
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    background: black;
+    box-shadow: 5px 5px 5px black;
+    font-family: "Sitka Small", serif;
+    font-size: 15px;
+
+}
+#submit:hover{
+    transform: scaleX(1.5);
+}

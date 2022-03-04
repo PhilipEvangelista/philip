@@ -1,0 +1,50 @@
+{% load static %}
+<html lang="">
+<head>
+    <title>Create-account</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'base/css_files/create_account.css' %}">
+</head>
+<body>
+<div class="information">
+    <form method="POST" action="">
+        {% csrf_token %}
+    <h1>DATE:{{ date }}</h1>
+        <label for="name">Name:</label>
+        <input name="name" type="text" id="name" placeholder="philip evangelista" maxlength="30" minlength="5"><br><br>
+        <label for="age">Age:</label>
+        <input name="age" type="Number" id="age" value="10" min="10" max="99"><br><br>
+        <label for="dept">Dept:</label>
+        <input name="dept" type="Number" id="dept" value="1" min="0" max="1000"><br><br>
+         <label for="birthday">Birthday:</label>
+        <input name="birthday" type="date" id="birthday" max="{{ date }}">
+
+        <dl>
+            <dt >Reminder</dt>
+            <dd >if your dept reaches 1 month,
+            then your dept will be increasing 1 peso a day</dd>
+        </dl>
+        <label>Agree or Disagree</label>
+        <label>
+            {% if value == True %}
+                <input name= 'value'  type="checkbox" value="agree" checked id="value">
+            {% else %}
+                <input name="value" type="checkbox" value="agree" id="value">
+            {% endif %}
+        </label><br><br>
+        <button type="submit" id='save' value="saved" name="save">Submit</button>
+
+    </form>
+</div>
+</body>
+    <script>
+        document.getElementById('save').onclick = function(){
+             let name = document.getElementById('name').value;
+             if(name === '')
+                alert("Sorry your name is blank yet")
+             let value = document.getElementById('value').value;
+             if (value !== 'agree')
+                 alert('You must Agree in policy!!')
+        }
+    </script>
+</html>
+

@@ -1,0 +1,39 @@
+{% include 'nave_bar.html' %}
+{% load static %}
+<!--suppress ALL -->
+<link rel="stylesheet" href="{% static 'base/css_files/add.css'%}">
+{% block content%}
+    <form method="POST" action="">
+    {% csrf_token %}
+    {% for i in info.information_set.all%}
+    <div class="information">
+    <h1 id="cautions"> Add Payment</h1>
+        <h1 id="balance">Balance: {{ i.balance }}</h1>
+        <table border="2px">
+            <tr>
+                <th>Payment:</th>
+                <td><label for="payment"></label><input id="payment" type="number" name="payment" placeholder="Amount"></td>
+            </tr>
+            <tr>
+                <th>Name:</th>
+                <td>{{ i.name }}</td>
+            </tr>
+            <tr>
+                <th>Date:</th>
+                <th>{{ date}}</th>
+            </tr>
+            <tr>
+                <th>Dept:</th>
+                <td>{{ i.dept }}</td>
+            </tr>
+            <tr>
+                <th>Interest:</th>
+                <td>{{ i.interest }}</td>
+            </tr>
+
+        </table>
+    </div>
+        <input type="submit" name="paid" value="saved" id="paid">
+    {% endfor %}
+    </form>
+{% endblock %}

@@ -1,0 +1,1 @@
+{"Stephen Esparcia": {"name": ["Stephen Esparcia", "Stephen Esparcia"], "age": [17, 17], "dept": [61.0, 181.0], "interest": [80.0, 81.0], "current_balance": [261.0, 62.0], "payment": [200.0, 31.0], "date": ["2022-02-24", "2022-02-25"], "count": [0, 1]}}

@@ -1,0 +1,53 @@
+#list-container{
+    position: absolute;
+    top: 20%;
+    width: 50%;
+    height: 70%;
+}
+#list-container div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+#list-container h1{
+    position: relative;
+    font-size: 30px;
+    color: white;
+    height: 10%;
+    border: 2px solid black;
+    text-align: center;
+    background: #444444;
+    padding: 5px;
+    left: 18%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+#list-container div li{
+    list-style-type: circle;
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    border-radius: 30px;
+    margin: 10px;
+    border:1px solid;
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    font-family: "Arial Narrow", serif;
+    background: black;
+
+}
+html{
+    background-size: cover;
+    background: linear-gradient(grey, black) no-repeat fixed center;
+
+}
+#list-container div ul a{
+    text-decoration: none;
+    color: green;
+}
+#list-container div li:hover
+{
+    transform: translateX(10px);
+}

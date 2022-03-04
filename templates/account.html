@@ -1,0 +1,65 @@
+{% include 'nave_bar.html' %}
+{% load static %}
+
+<!--suppress ALL -->
+<html lang="">
+<head><title>Account</title></head>
+<link rel="stylesheet" href="{%  static 'base/css_files/account.css' %}" type="text/css">
+<body>
+{% block content %}
+ {% for i in info.information_set.all %}
+        <div class="list-container">
+        <h1>Balance: {{ i.balance }}</h1>
+            <div>
+            <table border="1px" bgcolor="black">
+                <tr>
+                    <th>Name:</th>
+                    <td>{{ i.name }}</td>
+                </tr>
+                <tr>
+                    <th>Age:</th>
+                    <td>{{ i.age }}</td>
+                </tr>
+                <tr>
+                    <th>Date:</th>
+                    <td>{{ i.date }}</td>
+                </tr>
+                <tr>
+                    <th>Birthday:</th>
+                    <td>{{ i.birthday }}</td>
+                </tr>
+                <tr>
+                    <th>Interest:</th>
+                    <td>{{ i.interest }}</td>
+                </tr>
+                <tr>
+                    <th>Dept:</th>
+                    <td>{{ i.dept }}</td>
+                </tr>
+                <tr>
+                    <th>Agreement:</th>
+                    {% if i.bool == False %}
+                        <td>Disagree</td>
+                    {% else %}
+                        <td>Agree</td>
+                    {% endif %}
+                </tr>
+            </table>
+
+        </div>
+
+        </div>
+
+    <div id="list-button">
+    <a href="{% url 'edit' info.id%}"><button>Edit</button></a><br>
+        <a href="{% url 'payment' info.id%}"><button>Payment</button></a>
+        <a href="{% url 'Add' info.id%}"><button>Add</button></a>
+    <a href="{% url 'history' info.id%}"><button>History</button></a>
+
+
+    </div>
+ {% endfor %}
+{% endblock %}
+
+</body>
+</html>

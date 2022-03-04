@@ -1,0 +1,1 @@
+{"airene": {"name": ["airene"], "age": [29], "dept": [20.0], "interest": [0.0], "current_balance": [40.0], "payment": [20.0], "date": ["2022-03-04"], "count": [0]}}

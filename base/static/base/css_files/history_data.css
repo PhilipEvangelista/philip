@@ -1,0 +1,33 @@
+.data-container{
+    border: 1px solid black;
+    position: fixed;
+    top: 25%;
+    width: 70%;
+    height: 70%;
+    left: 15%;
+}
+.data-container table{
+    border: 1px solid;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    font-family: "Arial Narrow", serif;
+    text-align: center;
+    background: #fa9f9f;
+
+}
+html{
+    background: green;
+}
+h1{
+    position: fixed;
+    top: 13%;
+    left: 35%;
+    border: 1px solid white;
+    padding: 5px;
+    color: white;
+    width: 30%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

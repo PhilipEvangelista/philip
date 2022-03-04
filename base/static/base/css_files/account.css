@@ -1,0 +1,59 @@
+html{
+    background: linear-gradient(to right, blue, red);
+}
+.list-container{
+    border: 2px solid lightslategray;
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    top: 20%;
+    left: 15%;
+    background: black;
+    border-radius: 10px;
+}
+.list-container div{
+    position: relative;
+    top: 0;
+    height: 84.2%;
+
+}
+.list-container div table{
+    width: 100%;
+    height: 100%;
+    color: green;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 20px;
+}
+h1{
+    position: relative;
+    left: 20%;
+    color: green;
+}
+#list-button{
+    position: fixed;
+    top: 20%;
+    left: 75%;
+    border: 2px solid;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 5px 6px 5px black;
+    font-weight: bold;
+}
+#list-button button{
+    padding: 5px;
+    width: 100%;
+    background: black;
+    color: white;
+
+    text-shadow: 0 0 0 yellow, 0 -5px 2px red ;
+    font-family: "MV Boli", serif;
+    font-size: 20px;
+}
+#list-button button:hover{
+    transform: scaleX(2);
+}
+#list-button button a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,31 @@
+#nav-bar{
+    border: 2px groove white;
+    width: 60%;
+    padding: 10px;
+    background: black;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 30px;
+    position: fixed;
+    left: 12%;
+
+
+
+
+}
+#nav-bar table th a {
+    text-decoration: none;
+    color: white;
+    
+}
+#nav-bar table th{
+    width: 20%;
+    font-size: 20px;
+
+}
+
+#nav-bar table th:hover{
+    transform: scaleY(2);
+    text-shadow:0 0 5px yellow, 0 -5px 5px red;
+    
+
+}

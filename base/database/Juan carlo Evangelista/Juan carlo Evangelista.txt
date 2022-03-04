@@ -1,0 +1,1 @@
+{"Juan carlo Evangelista": {"name": ["Juan carlo Evangelista"], "age": [33], "dept": [430.0], "interest": [10.0], "current_balance": [730.0], "payment": [300.0], "date": ["2022-03-01"], "count": [0]}}

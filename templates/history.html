@@ -1,0 +1,36 @@
+{% include 'nave_bar.html' %}
+{% load static %}
+{% block content %}
+
+    <!--suppress ALL -->
+     <link rel="stylesheet" href="{% static 'base/css_files/history.css' %}" type="text/css">
+    <div id="list-container" method="GET">
+        <h1>Payment History</h1>
+    <div>
+        <ul>
+
+    {% for _, v in info.items %}
+
+        {% for k in v.count%}
+<a href="{% url 'history_data' get.id k%}">
+            <li>{{k}}</li>
+            </a>
+        {% endfor %}
+    {% endfor %}
+    </ul>
+    <h1>Add History</h1>
+     <ul>
+
+    {% for _, v in payment.items %}
+
+        {% for k in v.count%}
+<a href="{% url 'add_history' get.id k%}">
+            <li>{{k}}</li>
+            </a>
+        {% endfor %}
+    {% endfor %}
+    </ul>
+    </div>
+    </div>
+
+{% endblock %}

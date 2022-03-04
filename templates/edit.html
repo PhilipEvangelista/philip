@@ -1,0 +1,15 @@
+{% include 'nave_bar.html'%}
+{% load static  %}
+{% block content %}
+    <link rel="stylesheet" href='{% static "base/css_files/edit.css" %}'>
+    <form method="POST" action="">
+    {% csrf_token %}
+    <div class="edit-container">
+        <div id="form">
+             {{ form.as_p }}
+        </div>
+
+    </div>
+    <input type="submit" value="Save" id="submit">
+    </form>
+{% endblock %}

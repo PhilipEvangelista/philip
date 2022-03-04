@@ -1,0 +1,60 @@
+.information{
+    border: 2px solid;
+    position: fixed;
+    left: 15%;
+    top: 30%;
+    width: 60%;
+    height: 50%;
+    background: black;
+    color: green;
+
+}
+.information #cautions{
+    border-bottom: white 2px solid ;
+    text-align: center;
+    font-family: Impact, serif;
+
+}
+.information #balance{
+    position: relative;
+    left: 25%;
+    font-family: Impact, serif;
+    font-size: 20px;
+    border: 2px solid black;
+    width: 55%;
+    text-align: center;
+    background: black;
+    color: green;
+}
+.information table{
+    width: 100%;
+    height: 62%;
+    text-align: center;
+    color: green;
+}
+#payment{
+    width : 100%;
+    padding: 10px;
+    color: green;
+    background: black;
+}
+#paid {
+    position: fixed;
+    left: 15%;
+    top: 81%;
+    width: 60.8%;
+    background: red;
+    font-family: impact, serif;
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+    box-shadow: 5px 5px 5px black;
+    border-color: #222222;
+}
+#paid:hover{
+    transform: translateY(-10%);
+
+}
+html{
+    background: linear-gradient(to left, red, orange);
+}

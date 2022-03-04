@@ -1,0 +1,22 @@
+{% load static %}
+
+<!--suppress ALL -->
+<html>
+<header>
+    <link rel="stylesheet" href="{% static 'base/css_files/nav_bar.css'%}">
+</header>
+<body>
+{% block content %}
+    <div id="nav-bar">
+    <table border="0px">
+        <tr>
+            <th><a href="{% url 'home'%}">Home</a></th>
+            <th><a href="{% url 'log_in' %}">Log In</a></th>
+            <th><a href="{% url 'create-account'%}">Create-account</a> </th>
+            <th ><a href="{%url 'status'%}">Status</a></th>
+        </tr>
+    </table>
+    </div>
+{% endblock %}
+</body>
+</html>

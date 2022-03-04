@@ -1,0 +1,20 @@
+{% include 'nave_bar.html' %}
+{% load static %}
+{% block content %}
+    <!--suppress ALL -->
+    <div id="list-container">
+
+    <div>
+        <ul>
+    <link rel="stylesheet" href="{% static 'base/css_files/log_in.css' %}" type="text/css">
+    {% for i in name %}
+        {% for b in i.information_set.all %}
+        <a href="{% url 'account' i.id%}"><li>{{ b.name }}</li></a>
+
+        {% endfor %}
+    {% endfor %}
+    </ul>
+    </div>
+
+    </div>
+{% endblock %}

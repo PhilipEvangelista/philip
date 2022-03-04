@@ -1,0 +1,33 @@
+
+.home-container{
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    left: 20%;
+    top: 10%;
+
+}
+.home-container button{
+    position: relative;
+    left: 50%;
+    top: 70%;
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 5px yellow, 0 -5px 5px red;
+    box-shadow: 3px 3px 5px black;
+    background: black;
+    border-color: #222222;
+
+}
+.home-container button:hover{
+    transform: scaleY(2) ;
+
+    color: white;
+}
+html{
+    background-image: url("https://i.gifer.com/embedded/download/ViPW.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
