@@ -12,10 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-STATIC_ROOT = os.path.join(BASE_DIR, 'base\\static')
 
 
 # Quick-start development settings - unsuitable for production
@@ -25,9 +25,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'base\\static')
 SECRET_KEY = 'django-insecure-f!3(2y1s016gv1%avy5=ed44u484ht)du)255-e-5s38vu4gin'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','deptdatabase1.herokuapp.com']
+ALLOWED_HOSTS = ['philip-dept.herokuapp.com']
 
 
 # Application definition
@@ -81,11 +81,15 @@ WSGI_APPLICATION = 'Django_practice.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd7b1vrudkhi07f',
+        'HOST': "ec2-54-158-26-89.compute-1.amazonaws.com",
+        "USER": 'hvccygzsaxcajx',
+        "PASSWORD": "925497a9795674ada254742534eda6253c77a10ae88f869876ba1c905c35fb98",
+        'PORT': '5432'
+
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -121,7 +125,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = '/static/'
+django_heroku.settings(locals())
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
