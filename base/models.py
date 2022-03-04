@@ -19,6 +19,7 @@ class Information(models.Model):
     dept = models.FloatField(default=0)
     balance = models.FloatField(default=0)
     interest = models.FloatField(default=0)
+    count_interest = models.DateTimeField(default=timezone.now())
     bool = models.BooleanField(default=False)
     date = models.DateTimeField(default=datetime.date.today())
     birthday = models.DateTimeField(default=datetime.date(2004, 5, 11))
