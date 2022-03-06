@@ -23,6 +23,7 @@ class Information(models.Model):
     date = models.DateTimeField(default=timezone.datetime.now())
     birthday = models.DateTimeField(default=timezone.datetime.now())
     interest_bool = models.BooleanField(default=True)
+    count_interest - models.IntegerField(null=True, blank=True)
 
     def __str__(self):
         return self.name
