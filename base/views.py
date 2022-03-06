@@ -31,7 +31,7 @@ def home(request):
 
 
 def create_account(request):
-    value = None
+    value = False
     if request.method == "POST":
         ls = Name(name=request.POST['name'])
         if request.POST['save'] == 'saved':
