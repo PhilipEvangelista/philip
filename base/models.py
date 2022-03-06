@@ -20,8 +20,8 @@ class Information(models.Model):
     balance = models.FloatField(default=0)
     interest = models.FloatField(default=0)
     bool = models.BooleanField(default=False)
-    date = models.DateTimeField(auto_now_add=True, null=True)
-    birthday = models.DateTimeField(auto_now=True, null=True)
+    date = models.DateTimeField(default=timezone.datetime.now())
+    birthday = models.DateTimeField(default=timezone.datetime.now())
     interest_bool = models.BooleanField(default=True)
 
     def __str__(self):
