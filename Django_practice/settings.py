@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'Django_practice.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd7b1vrudkhi07f',
-        'HOST': "ec2-54-158-26-89.compute-1.amazonaws.com",
-        "USER": 'hvccygzsaxcajx',
-        "PASSWORD": "925497a9795674ada254742534eda6253c77a10ae88f869876ba1c905c35fb98",
-        'PORT': '5432'
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'philip',
+        'HOST': "127.0.0.1",
+        "USER": 'root',
+        "PASSWORD": "root",
+        'PORT': '3360'
 
     }
 }
